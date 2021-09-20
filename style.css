@@ -22,7 +22,7 @@ a:hover
 }
 a:visited
 {
-	color:#101010;
+	color:inherit;
 }
 a:click
 {

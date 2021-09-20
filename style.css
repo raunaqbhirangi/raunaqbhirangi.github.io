@@ -20,14 +20,11 @@ a:hover
 	color:#61892f
 	
 }
-a:visited
+a:visited, a:click
 {
 	color:inherit;
 }
-a:click
-{
-	color:#A1A1A1;
-}
+
 
 /* A[href=""], A[href="#"] {
 	color: #61892f;
@@ -111,7 +108,7 @@ h3{
 .section{
 	text-align: justify;
 }
-.section a:link{
+.section a:link, a:visited, a:click{
 	color:#86c232
 }
 .section a:hover{

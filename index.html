@@ -2,10 +2,14 @@
 
 <head>
     <title>Raunaq Bhirangi</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="java.js"></script>
     <link rel="shortcut icon" href="https://www.ri.cmu.edu/wp-content/uploads/2017/04/ri-favicon.ico"
@@ -15,344 +19,407 @@
 
 <body>
 
-    <div class="navbar">
-        <div class="nav_content">
-            <div class="left_name">
-                <a href=""> Raunaq Bhirangi</a>
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Raunaq Bhirangi</a>
+            <div class="navbar-controls">
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <div class="nav_links">
-                <div class="tab"><a href="#research_anc">Research</a></div>
-                <div class="tab"><a href="#teaching_anc">Teaching</a></div>
-                <div class="tab"><a href="#more_anc">More</a></div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research_anc">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#teaching_anc">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#more_anc">More</a>
+                    </li>
+                </ul>
             </div>
         </div>
-
-    </div>
-    <div class="about_wrapper">
-        <div id="about_me" class="section">
-            <div class="section_title"> About Me</div>
-            Hi there! I am Raunaq and I am a postdoctoral researcher with <a href="https://www.lerrelpinto.com" target="_blank">Lerrel Pinto</a> in the 
-            <a href="https://wp.nyu.edu/cilvr/" target="_blank">CILVR Lab</a> at <a href="https://cs.nyu.edu/home/index.html" target="_blank">NYU Courant</a>. 
-            I received my PhD from the <a href="https://www.ri.cmu.edu/" target="_blank">Robotics Institute</a> at CMU School of Computer Science, where I was advised by
-            <a href="https://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav
-                Gupta</a> and <a href="http://sml.me.cmu.edu/?page_id=408" target="_blank">Carmel Majidi</a>. Over the past two years, I also worked as
-            a Visiting Researcher at Meta AI. 
-            
-            <!-- <p>
-                Robotics is the most interdisciplinary of fields, and I believe that bringing robots into the unstructured, everyday
-                world of homes and offices requires a comprehensive understanding of the full system. In training to 
-                be a full-stack roboticist, I'm currently focused on ReSkin, a soft magnetic skin capable of large area tactile 
-                sensing. My work encompasses sensor design and development, ML models that generalize across sensors,
-                and ongoing efforts on integrating vision and tactile feedback for closed-loop robot interaction.
-
-            </p> -->
-            <p>
-                Before I started my PhD, I got a master's degree in Robotics working at the <a
-                    href="http://biorobotics.ri.cmu.edu/" target="_blank">Biorobotics Lab</a> at CMU under the
-                guidance of <a href="https://www.ri.cmu.edu/ri-faculty/howie-choset/" target="_blank">Howie Choset</a>
-                and
-                <a href="https://www.ri.cmu.edu/ri-faculty/matthew-j-travers/" target="_blank">Matthew Travers</a>, working 
-                on legged and modular robots.
-
-            <p>
-                A lifetime ago, I spent 4 years as an undergrad at the IIT Bombay dabbling in
-                debate, robotics and a ton of dynamics classes.
-            </p>
-            <p>
-                Connect with me over email at raunaqbhirangi [at] nyu [dot] edu!
-            </p>
-            <div class="about_links">
-                <div class="about_link"><a href="mailto:raunaqbhirangi@nyu.edu" target="_blank">email</a></div>
-                <div class="about_link"><a href="https://drive.google.com/file/d/15a633K04lnMMUWUxTgtvWAlEyNihUbHn/view?usp=sharing" target="_blank">CV</a></div>
-                <div class="about_link"><a href="https://scholar.google.com/citations?user=LUy4hkcAAAAJ&hl=en&oi=ao"
-                        target="_blank">Scholar</a></div>
-                <div class="about_link"><a href="https://github.com/raunaqbhirangi/" target="_blank">Github</a></div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 order-2 order-md-1">
+                <div id="about_me" class="section">
+                    <div class="section_title"> About Me</div>
+                    <p>
+                        Hi there! I am Raunaq and I am a postdoctoral researcher with <a href="https://www.lerrelpinto.com" target="_blank">Lerrel Pinto</a> in the 
+                        <a href="https://wp.nyu.edu/cilvr/" target="_blank">CILVR Lab</a> at <a href="https://cs.nyu.edu/home/index.html" target="_blank">NYU Courant</a> working at the 
+                        intersection of . 
+                        I received my PhD from the <a href="https://www.ri.cmu.edu/" target="_blank">Robotics Institute</a> at CMU School of Computer Science, where I was advised by
+                        <a href="https://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav
+                            Gupta</a> and <a href="http://sml.me.cmu.edu/?page_id=408" target="_blank">Carmel Majidi</a>. During my PhD, I was also
+                        a Visiting Researcher at Meta AI for two years as part of the <a href="https://ai.meta.com/blog/facebook-ai-and-facebook-reality-labs-announce-research-and-mentorship-program-with-carnegie-mellon-university/" target="_blank">Facebook Research & AI Mentorship Program (FRAIM)</a>. 
+                    </p>
+                    <p>
+                        Before I started my PhD, I got a master's degree in Robotics working at the <a
+                            href="http://biorobotics.ri.cmu.edu/" target="_blank">Biorobotics Lab</a> at CMU under the
+                        guidance of <a href="https://www.ri.cmu.edu/ri-faculty/howie-choset/" target="_blank">Howie Choset</a>
+                        and
+                        <a href="https://www.ri.cmu.edu/ri-faculty/matthew-j-travers/" target="_blank">Matthew Travers</a>, working 
+                        on legged and modular robots. A lifetime ago, I spent 4 years as an undergrad at the IIT Bombay dabbling in
+                        debate, robotics and a ton of dynamics classes.
+                    </p>
+                    <p>
+                        Connect with me over email at raunaqbhirangi [at] nyu [dot] edu!
+                    </p>
+                    <div class="social-links">
+                        <a href="mailto:raunaqbhirangi@nyu.edu" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://drive.google.com/file/d/15a633K04lnMMUWUxTgtvWAlEyNihUbHn/view?usp=sharing" target="_blank" title="CV"><span class="cv-icon">CV</span></a>
+                        <a href="https://scholar.google.com/citations?user=LUy4hkcAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://github.com/raunaqbhirangi/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/raunaq-bhirangi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/raunaqmb" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
             </div>
-
-        </div>
-
-        <div id="photu_box">
-            <img class="photu" src="images/headshot.jpg">
+            <div class="col-lg-4 col-md-5 text-center order-1 order-md-2">
+                <div id="photu_box">
+                    <img class="photu" src="images/headshot.jpg">
+                </div>
+            </div>
         </div>
     </div>
     <a class="anchor" id="research_anc"></a>
-    <div id="research" class="section">
-        <div class="section_title">Research</div>
-        Robotics is the most interdisciplinary of fields, and I believe that bringing robots into the unstructured, everyday
-        world of homes and offices requires a comprehensive understanding of every aspect of robotics. I think of myself
-        as a full-stack roboticist, and I'm currently focused on <a href="https://any-skin.github.io/" target="_blank">AnySkin</a>, 
-        a soft magnetic skin capable of large area tactile sensing which builds on my past work on <a href="https://reskin.dev" target="_blank">ReSkin</a>. 
-        My work encompasses sensor development, neural architectures for sensory data, and integrating vision and tactile feedback for precise, 
-        closed-loop robot interaction.
-        <div class="paper">
-            <div class="paper_img_box">
-                <a href="https://any-skin.github.io" target="_blank">
-                    <img class="paper_img" src="images/papers/anyskin-2.jpeg" alt="anyskin">
-                </a>
+    <div class="container">
+        <div id="research" class="section">
+            <div class="section_title">Research</div>
+            <p>
+                Robotics is the most interdisciplinary of fields, and I believe that bringing robots into the unstructured, everyday
+                world of homes and offices requires a comprehensive understanding of every aspect of robotics. I think of myself
+                as a full-stack roboticist, and my work spans hardware development, real-world robot learning, and dexterity.
+            </p>
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <div class="video-thumbnail" onclick="playVideo(this, 'videos/eflesh_small.mp4')">
+                        <img class="paper_img" src="videos/eflesh_thumbnail.png" alt="eFlesh">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://any-skin.github.io" target="_blank">AnySkin: Plug-and-play Tactile Skins for Robotic Touch</a></h3>
-                </div>
-                <div class="paper_author">
-                    <b>Raunaq Bhirangi</b>, Venkatesh Pattabiraman, Enes Erciyes, Yifeng Cao,
-                    <a href="https://tesshellebrekers.com" target="_blank">Tess Hellebrekers</a> and 
-                    <a href="https://www.lerrelpinto.com" target="_blank">Lerrel Pinto</a>
-                </div>
-                <div class="paper_conf">
-                    <i>Submitted to ICRA 2024</i>
-                </div>
-                <div class="paper_links">
-                    <a href="https://arxiv.org/abs/2409.08276"
-                        target="_blank">paper</a> |
-                    <!-- <span class="cs_links">paper</span> | -->
-                    <a href="https://github.com/raunaqbhirangi/anyskin" target="_blank">code</a> |
-                    <!-- <span class="cs_links">code</span> | -->
-                    <a href="https://any-skin.github.io"
-                        target="_blank">video</a> |
-                    <!-- <span class="cs_links">video</span> | -->
-                    <!-- <a href="" target="_blank">website</a> -->
-                    <a href="https://any-skin.github.io" target="_blank">website</a>
-                    <!-- <span class="link_comment">(code and website coming soon)</span> -->
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://e-flesh.com" target="_blank">eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        Venkatesh Pattabiraman, Zizhou Huang, Daniele Panozzo, Denis Zorin, Lerrel Pinto, <b>Raunaq Bhirangi</b>
+                    </div>
+                    <!-- <div class="paper_status" style="color: #bd3a77; font-style: italic; margin-bottom: 8px;">
+                        Under Review
+                    </div> -->
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/abs/2506.09994" target="_blank">paper</a> |
+                        <a href="https://github.com/notvenky/eFlesh" target="_blank">code</a> |
+                        <a href="videos/eflesh_small.mp4" target="_blank">video</a> |
+                        <a href="https://e-flesh.com" target="_blank">website</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="paper">
-            <div class="paper_img_box">
-                <a href="https://visuoskin.github.io" target="_blank">
-                    <img class="paper_img" src="images/papers/visk.png" alt="anyskin">
-                </a>
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <div class="video-thumbnail" onclick="playVideo(this, 'videos/vital_small.mp4')">
+                        <img class="paper_img" src="videos/vital_thumbnail.png" alt="Touch begins where vision ends">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://visuoskin.github.io" target="_blank">Learning Precise, Contact-Rich Manipulation through Uncalibrated Tactile Skins</a></h3>
-                </div>
-                <div class="paper_author">
-                    Venkatesh Pattabiraman*, Yifeng Cao, Siddhant Haldar,
-                    <a href="https://tesshellebrekers.com" target="_blank">Tess Hellebrekers</a>, 
-                    <a href="https://www.lerrelpinto.com" target="_blank">Lerrel Pinto</a> and
-                    <b>Raunaq Bhirangi</b>*
-                </div>
-                <div class="paper_conf">
-                    <i>Submitted to ICRA 2024</i>
-                </div>
-                <div class="paper_links">
-                    <a href="https://arxiv.org/abs/2410.17246"
-                        target="_blank">paper</a> |
-                    <!-- <span class="cs_links">paper</span> | -->
-                    <a href="https://github.com/raunaqbhirangi/visuoskin" target="_blank">code</a> |
-                    <!-- <span class="cs_links">code</span> | -->
-                    <a href="https://visuoskin.github.io"
-                        target="_blank">video</a> |
-                    <!-- <span class="cs_links">video</span> | -->
-                    <!-- <a href="" target="_blank">website</a> -->
-                    <a href="https://visuoskin.github.io" target="_blank">website</a>
-                    <!-- <span class="link_comment">(code and website coming soon)</span> -->
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://vitalprecise.github.io" target="_blank">Touch begins where vision ends: Generalizable policies for contact-rich manipulation</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        Zifan Zhao, Siddhant Haldar, Jinda Cui, Lerrel Pinto, <b>Raunaq Bhirangi</b>
+                    </div>
+                    <!-- <div class="paper_status" style="color: #bd3a77; font-style: italic; margin-bottom: 8px;">
+                        Under Review
+                    </div> -->
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/abs/2506.13762" target="_blank">paper</a> |
+                        <a href="https://github.com/Exiam6/ViTaL" target="_blank">code</a> |
+                        <a href="" target="_blank">video</a> |
+                        <a href="https://vitalprecise.github.io" target="_blank">website</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="paper">
-            <div class="paper_img_box">
-                <a href="https://hiss-csp.github.io" target="_blank">
-                    <img class="paper_img" src="images/papers/icml2024.jpeg" alt="hiss-csp">
-                </a>
+        
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <div class="video-thumbnail" onclick="playVideo(this, 'videos/egozero_small.mp4')">
+                        <img class="paper_img" src="videos/egozero_thumbnail.png" alt="EgoZero">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://hiss-csp.github.io" target="_blank">Hierarchical State Space Models for Continuous Sequence-to-Sequence Modeling</a></h3>
-                </div>
-                <div class="paper_author">
-                    <b>Raunaq Bhirangi</b>, Chenyu Wang, Venkatesh P, 
-                    <a href="http://sml.me.cmu.edu/?page_id=408" target="_blank">Carmel Majidi</a>, 
-                    <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a> , 
-                    <a href="https://tesshellebrekers.com" target="_blank">Tess Hellebrekers</a> and 
-                    <a href="https://www.lerrelpinto.com" target="_blank">Lerrel Pinto</a>
-                </div>
-                <div class="paper_conf">
-                    ICML 2024
-                </div>
-                <div class="paper_links">
-                    <a href="https://arxiv.org/pdf/2402.10211.pdf"
-                        target="_blank">paper</a> |
-                    <!-- <span class="cs_links">paper</span> | -->
-                    <a href="https://github.com/raunaqbhirangi/hiss" target="_blank">code</a> |
-                    <!-- <span class="cs_links">code</span> | -->
-                    <a href="https://drive.google.com/file/d/1l5XXpZExwK68UBKuAwHY1bHA6dtucq5W/view?usp=share_link"
-                        target="_blank">video</a> |
-                    <!-- <span class="cs_links">video</span> | -->
-                    <!-- <a href="" target="_blank">website</a> -->
-                    <a href="https://hiss-csp.github.io" target="_blank">website</a>
-                    <!-- <span class="link_comment">(code and website coming soon)</span> -->
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://egozero-robot.github.io" target="_blank">EgoZero: Robot learning from smart glasses</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        Vincent Liu, Ademi Adeniji, Haotian Zhan, <b>Raunaq Bhirangi</b>, Pieter Abbeel, Lerrel Pinto
+                    </div>
+                    <!-- <div class="paper_status" style="color: #bd3a77; font-style: italic; margin-bottom: 8px;">
+                        Under Review
+                    </div> -->
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/abs/2505.20290" target="_blank">paper</a> |
+                        <a href="https://github.com/vliu15/egozero" target="_blank">code</a> |
+                        <a href="" target="_blank">video</a> |
+                        <a href="https://egozero-robot.github.io" target="_blank">website</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="paper">
-            <div class="paper_img_box">
-                <a href="https://sites.google.com/view/dmanus" target="_blank">
-                    <img class="paper_img" src="images/papers/icra_2023.png" alt="D'Manus">
-                </a>
+        
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <div class="video-thumbnail" onclick="playVideo(this, 'videos/ftf_small.mp4')">
+                        <img class="paper_img" src="videos/ftf_thumbnail.png" alt="Feel the Force">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://sites.google.com/view/dmanus" target="_blank">All the Feels: A Dexterous Hand with Large-Area
-                            Sensing</a></h3>
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://feel-the-force-ftf.github.io" target="_blank">Feel the Force: Contact-Driven Learning from Humans</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        Ademi Adeniji, Zhuoran Chen, Vincent Liu, Venkatesh Pattabiraman, Siddhant Haldar, <b>Raunaq Bhirangi</b>, Pieter Abbeel, Lerrel Pinto
+                    </div>
+                    <!-- <div class="paper_conf">
+                        CoRL 2025<span style='color:#bd3a77'> (under review)</span>
+                    </div> -->
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/abs/2506.01944" target="_blank">paper</a> |
+                        <a href="https://github.com/feel-the-force-ftf/feel-the-force" target="_blank">code</a> |
+                        <a href="" target="_blank">video</a> |
+                        <a href="https://feel-the-force-ftf.github.io" target="_blank">website</a>
+                    </div>
                 </div>
-                <div class="paper_author">
-                    <b>Raunaq Bhirangi</b>, Abigail DeFranco*, Jacob Adkins*, 
-                    <a href="http://sml.me.cmu.edu/?page_id=408" target="_blank">Carmel Majidi</a>, 
-                    <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a> , 
-                    <a href="https://tesshellebrekers.com" target="_blank">Tess Hellebrekers</a> and 
-                    <a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>
+            </div>
+        </div>
+        
+        
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <div class="video-thumbnail" onclick="playVideo(this, 'videos/anyskin_small.mp4')">
+                        <img class="paper_img" src="videos/anyskin_thumbnail.png" alt="AnySkin">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="paper_conf">
-                    RA-L 2023 <!--span style='color:#bd3a77'>(under review)</span-->
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://any-skin.github.io" target="_blank">AnySkin: Plug-and-play Tactile Skins for Robotic Touch</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        <b>Raunaq Bhirangi</b>, Venkatesh Pattabiraman, Enes Erciyes, Yifeng Cao, Tess Hellebrekers, Lerrel Pinto
+                    </div>
+                    <div class="paper_conf">
+                        ICRA 2025 <span style='color:#bd3a77'> <b>Best Paper:</b> RSS 2025 Workshop on Hardware Intelligence</span>
+                    </div>
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/abs/2409.08276"
+                            target="_blank">paper</a> |
+                        <a href="https://github.com/raunaqbhirangi/anyskin" target="_blank">code</a> |
+                        <a href="https://any-skin.github.io"
+                            target="_blank">video</a> |
+                        <a href="https://any-skin.github.io" target="_blank">website</a>
+                    </div>
                 </div>
-                <div class="paper_links">
-                    <a href="https://arxiv.org/pdf/2210.15658.pdf"
-                        target="_blank">paper</a> |
-                    <!-- <span class="cs_links">paper</span> | -->
-                    <a href="https://github.com/raunaqbhirangi/dmanus_release" target="_blank">code</a> |
-                    <!-- <span class="cs_links">code</span> | -->
-                    <a href="https://drive.google.com/file/d/18V0INWGwV_5ddB3Ai_Zp1MU7LF6n2LRM/view?usp=sharing"
-                        target="_blank">video</a> |
-                    <!-- <span class="cs_links">video</span> | -->
-                    <!-- <a href="" target="_blank">website</a> -->
-                    <a href="https://sites.google.com/view/dmanus" target="_blank">website</a>
-                    <!-- <span class="link_comment">(code and website coming soon)</span> -->
+            </div>
+        </div>
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <div class="video-thumbnail" onclick="playVideo(this, 'videos/visk_small.mp4')">
+                        <img class="paper_img" src="videos/visk_thumbnail.png" alt="Visk">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://visuoskin.github.io" target="_blank">Learning Precise, Contact-Rich Manipulation through Uncalibrated Tactile Skins</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        Venkatesh Pattabiraman*, Yifeng Cao, Siddhant Haldar, Lerrel Pinto,
+                        <b>Raunaq Bhirangi</b>*
+                    </div>
+                    <div class="paper_conf">
+                        ICRA 2025 Workshop on "Towards Human Level Intelligence Vision and Tactile Sensing" <span style='color:#bd3a77'> <b> Best Poster</b><span>
+                    </div>
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/abs/2410.17246"
+                            target="_blank">paper</a> |
+                        <a href="https://github.com/raunaqbhirangi/visuoskin" target="_blank">code</a> |
+                        <a href="https://visuoskin.github.io"
+                            target="_blank">video</a> |
+                        <a href="https://visuoskin.github.io" target="_blank">website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <div class="video-thumbnail" onclick="playVideo(this, 'videos/hiss_small.mp4')">
+                        <img class="paper_img" src="images/papers/icml2024.jpeg" alt="HiSS">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://hiss-csp.github.io" target="_blank">Hierarchical State Space Models for Continuous Sequence-to-Sequence Modeling</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        <b>Raunaq Bhirangi</b>, Chenyu Wang, Venkatesh P, Carmel Majidi, Abhinav Gupta, Tess Hellebrekers, Lerrel Pinto
+                    </div>
+                    <div class="paper_conf">
+                        ICML 2024 <span style='color:#bd3a77'> <b>Best Paper:</b> Next Generation Sequence Models Workshop</span>
+                    </div>
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/pdf/2402.10211.pdf"
+                            target="_blank">paper</a> |
+                        <a href="https://github.com/raunaqbhirangi/hiss" target="_blank">code</a> |
+                        <a href="https://drive.google.com/file/d/1l5XXpZExwK68UBKuAwHY1bHA6dtucq5W/view?usp=share_link"
+                            target="_blank">video</a> |
+                        <a href="https://hiss-csp.github.io" target="_blank">website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <a href="https://sites.google.com/view/dmanus" target="_blank">
+                        <img class="paper_img" src="images/papers/icra_2023.png" alt="D'Manus">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://sites.google.com/view/dmanus" target="_blank">All the Feels: A Dexterous Hand with Large-Area
+                                Sensing</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        <b>Raunaq Bhirangi</b>, Abigail DeFranco*, Jacob Adkins*, Carmel Majidi, Abhinav Gupta, Tess Hellebrekers, Vikash Kumar
+                    </div>
+                    <div class="paper_conf">
+                        RA-L 2023
+                    </div>
+                    <div class="paper_links">
+                        <a href="https://arxiv.org/pdf/2210.15658.pdf"
+                            target="_blank">paper</a> |
+                        <a href="https://github.com/raunaqbhirangi/dmanus_release" target="_blank">code</a> |
+                        <a href="https://drive.google.com/file/d/18V0INWGwV_5ddB3Ai_Zp1MU7LF6n2LRM/view?usp=sharing"
+                            target="_blank">video</a> |
+                        <a href="https://sites.google.com/view/dmanus" target="_blank">website</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="paper">
-            <div class="paper_img_box">
-                <a href="https://reskin.dev/" target="_blank">
-                <img class="paper_img" src="images/papers/corl.PNG" alt="ReSkin">
-                </a>
-            </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://reskin.dev/" target="_blank">ReSkin: versatile, replaceable, lasting tactile skins</a></h3>
-                </div>
-                <div class="paper_author">
-                    <b>Raunaq Bhirangi</b>*, 
-                    <a href="https://tesshellebrekers.com" target="_blank">Tess Hellebrekers</a>*, 
-                    <a href="http://sml.me.cmu.edu/?page_id=408" target="_blank">Carmel Majidi</a>, 
-                    <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>
-                </div>
-                <div class="paper_conf">
-                    CoRL 2021 <span style='color:#bd3a77'><b>ORAL</b></span>
-                </div>
-                <div class="paper_links">
-                    <a href="https://openreview.net/pdf?id=87_OJU4sw3V" target="_blank">paper</a> |
-                    <a href="https://github.com/raunaqbhirangi/reskin_sensor" target="_blank">code</a> |
-                    <a href="https://drive.google.com/file/d/14Oj6v6k3jYNWV39w-0ylXHjJye266rK0/view?usp=sharing"
-                        target="_blank">video</a> |
-                    <a href="https://reskin.dev/" target="_blank">website</a>
-                    <!-- <span class="link_comment">(code and website coming soon)</span> -->
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <a href="https://reskin.dev/" target="_blank">
+                    <img class="paper_img" src="images/papers/corl.PNG" alt="ReSkin">
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="paper">
-            <div class="paper_img_box">
-                <a href="https://ieeexplore.ieee.org/document/10122024" target="_blank">
-                <img class="paper_img" src="images/papers/robosoft_2023.png" alt="DragonClaw">
-                </a>
-            </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://ieeexplore.ieee.org/document/10122024" target="_blank">DragonClaw: A low-cost pneumatic gripper with integrated magnetic
-                            sensing</a></h3>
-                </div>
-                <div class="paper_author">
-                    Vani H. Sundaram, <b>Raunaq Bhirangi</b>, Mark Rentschler, 
-                    <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a> and 
-                    <a href="https://tesshellebrekers.com" target="_blank">Tess Hellebrekers</a>
-                </div>
-                <div class="paper_conf">
-                    RoboSoft 2023 <!--span style='color:#bd3a77'>(under review)</span-->
-                </div>
-                <div class="paper_links">
-                    <a href="https://ieeexplore.ieee.org/document/10122024"
-                        target="_blank">paper</a> 
-                    <!-- <span class="cs_links">code</span> |
-                    <span class="cs_links">video</span> |
-                    <span class="cs_links">website</span> -->
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://reskin.dev/" target="_blank">ReSkin: versatile, replaceable, lasting tactile skins</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        <b>Raunaq Bhirangi</b>*, Tess Hellebrekers*, Carmel Majidi, Abhinav Gupta
+                    </div>
+                    <div class="paper_conf">
+                        CoRL 2021 <span style='color:#bd3a77'><b>ORAL</b></span>
+                    </div>
+                    <div class="paper_links">
+                        <a href="https://openreview.net/pdf?id=87_OJU4sw3V" target="_blank">paper</a> |
+                        <a href="https://github.com/raunaqbhirangi/reskin_sensor" target="_blank">code</a> |
+                        <a href="https://drive.google.com/file/d/14Oj6v6k3jYNWV39w-0ylXHjJye266rK0/view?usp=sharing"
+                            target="_blank">video</a> |
+                        <a href="https://reskin.dev/" target="_blank">website</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="paper">
-            <div class="paper_img_box">
-                <img class="paper_img" src="images/papers/thesis.png" alt="Master's thesis">
-            </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://www.ri.cmu.edu/wp-content/uploads/2020/08/rbhirang_thesis.pdf">
-                            Learning Families of Behaviors for Legged Locomotion using Model-Free Deep Reinforcement
-                            Learning
-                        </a></h3>
-                </div>
-                <div class="paper_author">
-                    <b>Raunaq Bhirangi</b>
-                </div>
-                <div class="paper_conf">
-                    Master's Thesis
-                </div>
-                <div class="paper_links">
-                    <a href="https://www.ri.cmu.edu/wp-content/uploads/2020/08/rbhirang_thesis.pdf"
-                        target="_blank">thesis</a>
-                    <!-- <a href="">code</a> |  -->
-                    | <a
-                        href="https://drive.google.com/file/d/15T2M-8wtndC5C7ndz139KeWF4hcMSoLN/view?usp=sharing">video</a>
-                    <!-- <span class="link_comment">(code and website coming soon)</span> -->
+        <div class="paper row mb-4">
+            <div class="col-md-4 col-lg-3">
+                <div class="paper_img_box">
+                    <a href="https://ieeexplore.ieee.org/document/10122024" target="_blank">
+                    <img class="paper_img" src="images/papers/robosoft_2023.png" alt="DragonClaw">
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="paper">
-            <div class="paper_img_box">
-                <img class="paper_img" src="images/papers/icra2020.jpg" alt="icra2020">
-            </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3><a href="https://par.nsf.gov/servlets/purl/10195696">
-                            Inferring Task-Space Central Pattern Generator Parameters for Closed-loop Control of
-                            Underactuated Robots
-                        </a></h3>
-                </div>
-                <div class="paper_author">
-                    Nathan Kent, <b>Raunaq Bhirangi</b>, Matthew Travers, Thomas Howard
-                </div>
-                <div class="paper_conf">
-                    ICRA 2020
-                </div>
-                <div class="paper_links">
-                    <a href="https://par.nsf.gov/servlets/purl/10195696" target="_blank">paper</a>
-                    <!-- <a href="">code</a> |  -->
-                    <!-- <a href="">video</a><span class="link_comment">(code and website coming soon)</span> -->
+            <div class="col-md-8 col-lg-9">
+                <div class="paper_text">
+                    <div class="paper_title">
+                        <h3><a href="https://ieeexplore.ieee.org/document/10122024" target="_blank">DragonClaw: A low-cost pneumatic gripper with integrated magnetic
+                                sensing</a></h3>
+                    </div>
+                    <div class="paper_author">
+                        Vani H. Sundaram, <b>Raunaq Bhirangi</b>, Mark Rentschler, Abhinav Gupta, Tess Hellebrekers
+                    </div>
+                    <div class="paper_conf">
+                        RoboSoft 2023
+                    </div>
+                    <div class="paper_links">
+                        <a href="https://ieeexplore.ieee.org/document/10122024"
+                            target="_blank">paper</a> 
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="paper">
-            <div class="paper_img_box">
-                <img class="paper_img" src="images/papers/aaai2020.png" alt="aaai2020">
-            </div>
-            <div class="paper_text">
-                <div class="paper_title">
-                    <h3>Modular robot design synthesis with deep reinforcement learning</h3>
-                </div>
-                <div class="paper_author">
-                    Julian Whitman, <b>Raunaq Bhirangi</b>, Matthew Travers, Howie Choset
-                </div>
-                <div class="paper_conf">
-                    AAAI 2020
-                </div>
-                <div class="paper_links">
-                    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/6611/6465" target="_blank">paper</a>
-                    <!-- <a href="">code</a> | 
-                        <a href="">video</a> | 
-                        <a href="">website</a> -->
-                </div>
-            </div>
-        </div>
+    </div>
+    <a class="anchor" id="thesis_anc"></a>
+    <div id="thesis">
+        <div class="section_title">Theses</div>
+        <p><strong>PhD Thesis:</strong> <a href="https://kilthub.cmu.edu/articles/thesis/Tactile_sensing_for_Robot_Learning_Development_to_Deployment/27153390?file=49565013" target="_blank">Tactile sensing for Robot Learning: Development to Deployment</a> <i>Carnegie Mellon University, 2024</i></p>
+        <p><strong>Master's Thesis:</strong> <a href="https://www.ri.cmu.edu/wp-content/uploads/2020/08/rbhirang_thesis.pdf" target="_blank">Learning Families of Behaviors for Legged Locomotion using Model-Free Deep Reinforcement Learning</a> <i>Carnegie Mellon University, 2020</i></p>
     </div>
     <a class="anchor" id="teaching_anc"></a>
     <div id="teaching">
@@ -375,6 +442,170 @@
         about history, culture, politics and philosophy with no regard for time, hunger, thirst or the other
         person's evident lack of interest.
     </div>
+    </div>
 </body>
 
+<script>
+// Function to replace author names with their HTML links
+function replaceAuthorLinks() {
+    // This function is now disabled - author names will remain as plain text
+    // Uncomment the code below if you want to re-enable author links
+    
+    /*
+    const authorReplacements = {
+        'Zifan Zhao': '<a href="https://www.zifanzhao.com/" target="_blank">Zifan Zhao</a>',
+        'Siddhant Haldar': '<a href="https://siddhanthaldar.github.io/" target="_blank">Siddhant Haldar</a>',
+        'Lerrel Pinto': '<a href="https://www.lerrelpinto.com" target="_blank">Lerrel Pinto</a>',
+        'Abhinav Gupta': '<a href="https://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>',
+        'Carmel Majidi': '<a href="http://sml.me.cmu.edu/?page_id=408" target="_blank">Carmel Majidi</a>',
+        'Tess Hellebrekers': '<a href="https://tesshellebrekers.com" target="_blank">Tess Hellebrekers</a>',
+        'Pieter Abbeel': '<a href="https://people.eecs.berkeley.edu/~pabbeel/" target="_blank">Pieter Abbeel</a>',
+        'Vikash Kumar': '<a href="https://vikashplus.github.io" target="_blank">Vikash Kumar</a>',
+        'Howie Choset': '<a href="https://www.ri.cmu.edu/ri-faculty/howie-choset/" target="_blank">Howie Choset</a>',
+        'Matthew Travers': '<a href="https://www.ri.cmu.edu/ri-faculty/matthew-j-travers/" target="_blank">Matthew Travers</a>'
+    };
+
+    // Get all paper author sections
+    const authorSections = document.querySelectorAll('.paper_author');
+    
+    authorSections.forEach(section => {
+        let html = section.innerHTML;
+        
+        // Replace each author name with their HTML link
+        Object.entries(authorReplacements).forEach(([name, link]) => {
+            // Use regex to avoid replacing already linked names
+            const regex = new RegExp(`(?<!<a[^>]*>)${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![^<]*</a>)`, 'g');
+            html = html.replace(regex, link);
+        });
+        
+        section.innerHTML = html;
+    });
+    */
+}
+
+// Run the replacement when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    replaceAuthorLinks();
+    initializeTheme();
+});
+
+// Theme management
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'auto';
+    applyTheme(savedTheme);
+}
+
+function toggleTheme() {
+    const currentTheme = localStorage.getItem('theme') || 'auto';
+    let newTheme;
+    
+    // Cycle through: auto -> light -> dark -> auto
+    if (currentTheme === 'auto') {
+        newTheme = 'light';
+    } else if (currentTheme === 'light') {
+        newTheme = 'dark';
+    } else {
+        newTheme = 'auto';
+    }
+    
+    applyTheme(newTheme);
+}
+
+function applyTheme(theme) {
+    const body = document.body;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Remove existing theme classes
+    body.classList.remove('light-mode', 'dark-mode');
+    
+    if (theme === 'auto') {
+        // Use system preference
+        if (prefersDark) {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.add('light-mode');
+        }
+        localStorage.setItem('theme', 'auto');
+        updateThemeIcon('auto');
+    } else if (theme === 'light') {
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+        updateThemeIcon('light');
+    } else {
+        // dark mode
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        updateThemeIcon('dark');
+    }
+}
+
+function updateThemeIcon(theme) {
+    const icon = document.getElementById('theme-icon');
+    if (theme === 'light') {
+        icon.className = 'fas fa-sun';
+        icon.title = 'Switch to dark mode';
+    } else if (theme === 'dark') {
+        icon.className = 'fas fa-moon';
+        icon.title = 'Switch to auto mode';
+    } else {
+        // auto mode
+        icon.className = 'fas fa-adjust';
+        icon.title = 'Switch to light mode';
+    }
+}
+
+// Listen for system theme changes when in auto mode
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    const currentTheme = localStorage.getItem('theme') || 'auto';
+    if (currentTheme === 'auto') {
+        applyTheme('auto');
+    }
+});
+
+// Function to play video when thumbnail is clicked
+function playVideo(thumbnailElement, videoSrc) {
+    // Create video element
+    const video = document.createElement('video');
+    video.className = 'paper_img';
+    video.controls = true;
+    video.muted = true;
+    video.loop = true;
+    video.src = videoSrc;
+    
+    // Replace thumbnail with video
+    thumbnailElement.innerHTML = '';
+    thumbnailElement.appendChild(video);
+    
+    // Start playing
+    video.play().catch(function(error) {
+        // Handle autoplay restrictions
+        console.log('Autoplay prevented:', error);
+    });
+    
+    // Remove the onclick handler to prevent re-triggering
+    thumbnailElement.onclick = null;
+    
+    // Optional: Add a way to restore thumbnail (uncomment if needed)
+    // video.addEventListener('ended', function() {
+    //     // Only restore if not looping
+    //     if (!video.loop) {
+    //         restoreThumbnail(thumbnailElement, videoSrc);
+    //     }
+    // });
+}
+
+// Optional function to restore thumbnail (uncomment if needed)
+// function restoreThumbnail(thumbnailElement, videoSrc) {
+//     const thumbnailSrc = videoSrc.replace('.mp4', '_thumbnail.png');
+//     thumbnailElement.innerHTML = `
+//         <img class="paper_img" src="${thumbnailSrc}" alt="Video thumbnail">
+//         <div class="play-button">
+//             <i class="fas fa-play"></i>
+//         </div>
+//     `;
+//     thumbnailElement.onclick = function() { playVideo(this, videoSrc); };
+// }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>
+

@@ -492,6 +492,10 @@ body.light-mode .social-links a:hover .cv-icon {
 		border-radius: 5px;
 	}
 	
+	body.light-mode .navbar-nav {
+		background-color: var(--bg-primary-light) !important;
+	}
+	
 	.section_title {
 		font-size: 22px;
 	}
